@@ -10,6 +10,7 @@ var firstNumber = prompt("What is your first number?");
 var secondNumber = prompt("what is your second number?");
 var operator = prompt("Please select an operation. Your options are: + * - / ");
 var calculation;
+var fixer = Number(operator);
 
 
 /* switch (operator) {  //added a set of case statement to see if they make things simple
@@ -32,21 +33,21 @@ var calculation;
 */
 console.log(operator);
 
-switch (operator) {
+switch (fixer) {
     case 1 :
-        String("/");
+        1;
         calculation = Number(firstNumber) / Number(secondNumber);
         break;
     case 2 :
-        String("*");
-        calculation = Number(firstNumberv) * Number(secondNumber);
+        2;
+        calculation = Number(firstNumber) * Number(secondNumber);
         break;
     case 3 :
-        String("-");
+        3;
         calculation = Number(firstNumber) - Number(secondNumber);
         break;
     case 4 :
-        String("+");
+        4;
         calculation = Number(firstNumber) + Number(secondNumber);
         break;
     default :
@@ -74,5 +75,5 @@ var test2 = test[0]+test[1]+test[2];
 
 console.log(test);
 console.log(calculation);
-console.log(test2)
+console.log(test2);
 console.log("The answer of " +Number(firstNumber) + operator + Number(secondNumber)+ " is " +calculation);
