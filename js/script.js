@@ -3,34 +3,16 @@
  */
 
 
-alert("Welcome to the very first calculator created by Keddon");
+alert("Welcome to the very first calculator created by Keddon. This calculator will give you the result of any two numbers that you provide.");
 
 
 var firstNumber = prompt("What is your first number?");
+var operator = prompt("Please press the number related to the operation you would like to use. \n Press 1 for Divide. \n Press 2 for Multiply. \n Press 3 for Subtract. \n Press 4 for Addition. \n Press 5 to find percentages. eg 16 %of 90 = 14.4");
 var secondNumber = prompt("what is your second number?");
-var operator = prompt("Please select an operation. Your options are: + * - / ");
 var calculation;
 var fixer = Number(operator);
+var ranArray = [firstNumber,secondNumber,100];
 
-
-/* switch (operator) {  //added a set of case statement to see if they make things simple
-    case 1 : "/"
-        calculation = firstNumber / secondNumber; //this does not seem to be working
-        break;
-    case 2 : "*"
-        calculation = firstNumber * secondNumber;
-        break;
-    case 3 : "-"
-        calculation = firstNumber - secondNumber;
-        break;
-    case 4 : "+"
-        calculation = firstNumber + secondNumber;
-        break;
-    default :
-        "something may have went wrong, lets try again"
-}
-
-*/
 console.log(operator);
 
 switch (fixer) {
@@ -50,30 +32,11 @@ switch (fixer) {
         4;
         calculation = Number(firstNumber) + Number(secondNumber);
         break;
+    case 5 :
+        calculation = (ranArray[1]/ranArray[2]) * ranArray[0];
     default :
-        console.log("something may have went wrong, lets try again");
-        console.log(operator);
-
-
+        console.log("all is well");
 
 }
- /*if (operator = String("/")) {
-    calculation = Number(firstNumber) / Number(secondNumber);}
-    else if (operator = String("*")) {
-        calculation = Number(firstNumberv) * Number(secondNumber);}
-        else if (operator = "-") {
-            calculation = Number(firstNumber) - Number(secondNumber);}
-            else if (operator = "+") {
-                calculation = Number(firstNumber) + Number(secondNumber);
 
-}
-*/
-
-var test = [firstNumber,operator,secondNumber];
-var test2 = test[0]+test[1]+test[2];
-
-
-console.log(test);
-console.log(calculation);
-console.log(test2);
-console.log("The answer of " +Number(firstNumber) + operator + Number(secondNumber)+ " is " +calculation);
+console.log("The answer you were looking for is " +calculation);
