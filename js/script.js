@@ -32,7 +32,31 @@ var calculation;
 */
 console.log(operator);
 
- if (operator = String("/")) {
+switch (operator) {
+    case 1 :
+        String("/");
+        calculation = Number(firstNumber) / Number(secondNumber);
+        break;
+    case 2 :
+        String("*");
+        calculation = Number(firstNumberv) * Number(secondNumber);
+        break;
+    case 3 :
+        String("-");
+        calculation = Number(firstNumber) - Number(secondNumber);
+        break;
+    case 4 :
+        String("+");
+        calculation = Number(firstNumber) + Number(secondNumber);
+        break;
+    default :
+        console.log("something may have went wrong, lets try again");
+        console.log(operator);
+
+
+
+}
+ /*if (operator = String("/")) {
     calculation = Number(firstNumber) / Number(secondNumber);}
     else if (operator = String("*")) {
         calculation = Number(firstNumberv) * Number(secondNumber);}
@@ -40,8 +64,15 @@ console.log(operator);
             calculation = Number(firstNumber) - Number(secondNumber);}
             else if (operator = "+") {
                 calculation = Number(firstNumber) + Number(secondNumber);
+
 }
+*/
+
 var test = [firstNumber,operator,secondNumber];
+var test2 = test[0]+test[1]+test[2];
+
+
 console.log(test);
 console.log(calculation);
-alert("The answer of " +Number(firstNumber) + operator + Number(secondNumber)+ " is " +calculation);
+console.log(test2)
+console.log("The answer of " +Number(firstNumber) + operator + Number(secondNumber)+ " is " +calculation);
