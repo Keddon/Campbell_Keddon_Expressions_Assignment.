@@ -8,13 +8,13 @@ alert("Welcome to the very first calculator created by Keddon");
 
 var firstNumber = prompt("What is your first number?");
 var secondNumber = prompt("what is your second number?");
-var operator = prompt("Please select an operation. Your options are: 0+ 1* 2- 3/ ");
+var operator = prompt("Please select an operation. Your options are: + * - / ");
 var calculation;
 
 
-switch (operator) {  //added a set of case statement to see if they make things simple
+/* switch (operator) {  //added a set of case statement to see if they make things simple
     case 1 : "/"
-        calculation = firstNumber / secondNumber;
+        calculation = firstNumber / secondNumber; //this does not seem to be working
         break;
     case 2 : "*"
         calculation = firstNumber * secondNumber;
@@ -29,23 +29,19 @@ switch (operator) {  //added a set of case statement to see if they make things 
         "something may have went wrong, lets try again"
 }
 
+*/
+console.log(operator);
 
-
-
-
-
-
- /*if (operator = "/" ) {
+ if (operator = String("/")) {
     calculation = Number(firstNumber) / Number(secondNumber);}
-    else if (operator = "*") {
+    else if (operator = String("*")) {
         calculation = Number(firstNumberv) * Number(secondNumber);}
         else if (operator = "-") {
             calculation = Number(firstNumber) - Number(secondNumber);}
             else if (operator = "+") {
                 calculation = Number(firstNumber) + Number(secondNumber);
 }
-
-var text =
-*/
+var test = [firstNumber,operator,secondNumber];
+console.log(test);
 console.log(calculation);
 alert("The answer of " +Number(firstNumber) + operator + Number(secondNumber)+ " is " +calculation);
